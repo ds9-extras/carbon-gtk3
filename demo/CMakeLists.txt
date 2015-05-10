@@ -2,34 +2,34 @@
 include_directories( ${CMAKE_BINARY_DIR} )
 
 ########### next target ###############
-set( oxygen_gtk_demo_SOURCES
-    oxygenbuttondemowidget.cpp
-    oxygendemodialog.cpp
-    oxygendemowidget.cpp
-    oxygenframedemowidget.cpp
-    oxygeninfowidget.cpp
-    oxygeninputdemowidget.cpp
-    oxygenlistdemowidget.cpp
-    oxygensignal.cpp
-    oxygensignalhandler.cpp
-    oxygensliderdemowidget.cpp
-    oxygentimer.cpp
-    oxygentabdemowidget.cpp
-    oxygenversion.cpp
-    oxygengtkdemo_main.cpp
+set( carbon_gtk_demo_SOURCES
+    carbonbuttondemowidget.cpp
+    carbondemodialog.cpp
+    carbondemowidget.cpp
+    carbonframedemowidget.cpp
+    carboninfowidget.cpp
+    carboninputdemowidget.cpp
+    carbonlistdemowidget.cpp
+    carbonsignal.cpp
+    carbonsignalhandler.cpp
+    carbonsliderdemowidget.cpp
+    carbontimer.cpp
+    carbontabdemowidget.cpp
+    carbonversion.cpp
+    carbongtkdemo_main.cpp
  )
 
 IF( WIN32 )
-  add_executable( oxygen-gtk3-demo WIN32 ${oxygen_gtk_demo_SOURCES} )
+  add_executable( carbon-gtk3-demo WIN32 ${carbon_gtk_demo_SOURCES} )
 ELSE( WIN32 )
-  add_executable( oxygen-gtk3-demo ${oxygen_gtk_demo_SOURCES} )
+  add_executable( carbon-gtk3-demo ${carbon_gtk_demo_SOURCES} )
 ENDIF( WIN32 )
 
-target_link_libraries( oxygen-gtk3-demo ${GTK_LIBRARIES} ${CAIRO_LIBRARIES} ${X11_X11_LIB} )
-install( TARGETS oxygen-gtk3-demo DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )
+target_link_libraries( carbon-gtk3-demo ${GTK_LIBRARIES} ${CAIRO_LIBRARIES} ${X11_X11_LIB} )
+install( TARGETS carbon-gtk3-demo DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )
 
 # ########### next target ###############
-# set( deco_test_SOURCES oxygenversion.cpp oxygengtkdeco_main.cpp )
-# add_executable( oxygen-gtk-deco ${deco_test_SOURCES} )
-# target_link_libraries( oxygen-gtk-deco ${GTK_LIBRARIES} ${CAIRO_LIBRARIES} ${X11_X11_LIB} ${CMAKE_DL_LIBS} )
-# install( TARGETS oxygen-gtk-deco DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )
+# set( deco_test_SOURCES carbonversion.cpp carbongtkdeco_main.cpp )
+# add_executable( carbon-gtk-deco ${deco_test_SOURCES} )
+# target_link_libraries( carbon-gtk-deco ${GTK_LIBRARIES} ${CAIRO_LIBRARIES} ${X11_X11_LIB} ${CMAKE_DL_LIBS} )
+# install( TARGETS carbon-gtk-deco DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )

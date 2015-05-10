@@ -78,7 +78,7 @@ INFO: css border and padding ordering is either:
     -GtkWidget-separator-width: 3;
     -GtkWidget-separator-height: 3;
 
-    engine: oxygen-gtk;
+    engine: carbon-gtk;
 }
 
 /* customize border styles */
