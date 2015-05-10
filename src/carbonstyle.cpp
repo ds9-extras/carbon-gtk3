@@ -1378,7 +1378,7 @@ namespace Carbon
                 cairo_fill( context );
                 cairo_restore( context );
 
-                if( glow.isValid() ) _helper.holeFocused( base, glow, 7, true ).render( context, x, y, w, h );
+                if( glow.isValid() && false) _helper.holeFocused( base, glow, 7, true ).render( context, x, y, w, h );
                 else _helper.hole( base, 7, true ).render( context, x, y, w, h );
 
             } else if( glow.isValid() ) {
@@ -2532,7 +2532,7 @@ namespace Carbon
         */
 
         // enable gradient if XID is not passed
-        bool gradient=true;
+        bool gradient=_settings.useBackgroundGradient();;
 
         QtSettings::WindecoBlendType blendType(_settings.windecoBlendType());
         if( blendType==QtSettings::SolidColor )
